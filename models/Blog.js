@@ -41,4 +41,5 @@ Blog.init(
   }
 );
 
+// Export
 module.exports = Blog;
