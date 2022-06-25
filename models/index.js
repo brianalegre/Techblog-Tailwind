@@ -1,3 +1,5 @@
 const User = require('./User');
+const Blog = require('./Blog');
 
-module.exports = { User, Gallery, Painting };
+
+module.exports = { User, Blog };
