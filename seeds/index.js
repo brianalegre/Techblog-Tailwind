@@ -1,7 +1,7 @@
 // Import Modules
 const sequelize = require('../config/connection');
 const seedUsers = require('./user-seeds');
-// const seedBlogs = require('./blog-seeds');
+const seedBlogs = require('./blog-seeds');
 
 // Add Seed Data
 const seedAll = async () => {
@@ -11,8 +11,8 @@ const seedAll = async () => {
     await seedUsers();
     console.log('--- USERS SEEDED! ---');
 
-    // await seedBlogs();
-    // console.log('--- Blogs SEEDED! ---');
+    await seedBlogs();
+    console.log('--- Blogs SEEDED! ---');
 
 
     process.exit(0);
