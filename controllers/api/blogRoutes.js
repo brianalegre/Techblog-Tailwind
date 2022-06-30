@@ -1,6 +1,6 @@
 // Import
 const router = require('express').Router();
-const { Blog, User } = require('../../models');
+const { Blog, User, Comment } = require('../../models');
 
 // Endpoint /api/blogs
 
