@@ -25,13 +25,13 @@ Blog.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    username: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'user',
-        key: 'username'
-      }
-    }
+    // username: {
+    //   type: DataTypes.STRING,
+    //   references: {
+    //     model: 'user',
+    //     key: 'username'
+    //   }
+    // }
   },
   {
     sequelize,

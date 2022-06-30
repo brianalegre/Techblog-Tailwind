@@ -37,13 +37,13 @@ User.init(
         len: [8],
       },
     },
-    blog_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'blog',
-        key: 'id',
-      }
-    },
+    // blog_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'blog',
+    //     key: 'id',
+    //   }
+    // },
   },
   {
     // Encrypt Password

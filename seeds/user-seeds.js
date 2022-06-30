@@ -7,13 +7,13 @@ const userData = [
         username: 'userJuan',
         email: 'UserJuan@test.com',
         password: 'test123',
-        blog_id: 1,
+        // blog_id: 1,
     },
     {
         username: 'userThu',
         email: 'UserThu@test.com',
         password: 'test123',
-        blog_id: 2,
+        // blog_id: 2,
     },
 ]
 
