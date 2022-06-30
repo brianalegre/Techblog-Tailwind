@@ -7,31 +7,31 @@ class Blog extends Model { }
 
 Blog.init(
   {
-    id: {
+    blog_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    blog_title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    content: {
+    blog_content: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    post_date: {
+    blog_post_date: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    // username: {
-    //   type: DataTypes.STRING,
-    //   references: {
-    //     model: 'user',
-    //     key: 'username'
-    //   }
-    // }
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'user_id'
+      }
+    }
   },
   {
     sequelize,
