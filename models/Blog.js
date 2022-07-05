@@ -22,7 +22,7 @@ Blog.init(
       allowNull: false,
     },
     blog_post_date: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
     user_id: {

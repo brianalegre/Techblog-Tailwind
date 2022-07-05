@@ -9,7 +9,7 @@ const seedAll = async () => {
     await sequelize.sync({ force: true });
     console.log('--- DB SYNCED! ---');
 
-    await seedUsers();
+    await seedUsers(); 
     console.log('--- USERS SEEDED! ---');
 
     await seedBlogs();
