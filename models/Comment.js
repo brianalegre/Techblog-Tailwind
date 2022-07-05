@@ -14,7 +14,7 @@ Comment.init(
       autoIncrement: true,
     },
     comment_content: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     comment_post_date: {
@@ -45,4 +45,4 @@ Comment.init(
 );
 
 // Export
-module.exports = Blog;
+module.exports = Comment;

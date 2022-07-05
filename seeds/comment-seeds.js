@@ -5,13 +5,13 @@ const { Comment } = require('../models');
 const commentData = [
     {
         comment_content: 'FIRST COMMENT ON FIRST POST',
-        comment_post_date: 'September 1, 2021 08:30:00',
+        comment_post_date: '2022-03-25',
         user_id: 2,
         blog_id: 1,
     },
     {
         comment_content: 'SECOND COMMENT, MAYBE FIRST ON SECOND POST',
-        comment_post_date: 'September 2, 2021 08:30:00',
+        comment_post_date: '2022-03-25',
         user_id: 1,
         blog_id: 2,
     },

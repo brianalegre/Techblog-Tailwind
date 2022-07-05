@@ -14,11 +14,11 @@ Blog.init(
       autoIncrement: true,
     },
     blog_title: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     blog_content: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     blog_post_date: {
@@ -32,13 +32,13 @@ Blog.init(
         key: 'user_id'
       }
     },
-    comment_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'comment',
-        key: 'comment_id'
-      }
-    },
+    // comment_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'comment',
+    //     key: 'comment_id'
+    //   }
+    // },
   },
   {
     sequelize,
