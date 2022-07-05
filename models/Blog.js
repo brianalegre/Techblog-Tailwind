@@ -31,7 +31,14 @@ Blog.init(
         model: 'user',
         key: 'user_id'
       }
-    }
+    },
+    comment_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'comment',
+        key: 'comment_id'
+      }
+    },
   },
   {
     sequelize,
