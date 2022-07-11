@@ -6,7 +6,10 @@ const { User, Blog, Comment } = require('../models');
 router.get('/allBlogs', async (req, res) => {
     try {
         const allBlogs = await Blog.findAll({
-            include: [{ model: User }, { model: Comment }]
+            // include: [{ model: User }, { model: Comment }]
+            include: [{ all: true, nested: true }],
+
+
         });
 
         // res.status(200).json(allBlogs)
