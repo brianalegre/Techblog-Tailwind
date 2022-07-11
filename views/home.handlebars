@@ -1,2 +1,7 @@
-{{!-- Homepage Container --}}
-<h1> This is the Home Handlebar </h1>
+{{!-- Display all Blogs --}}
+<div>
+    {{!-- Categories title --}}
+    {{#each blogs}}
+    {{> allBlogs}}
+    {{/each}}
+</div>

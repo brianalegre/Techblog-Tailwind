@@ -2,8 +2,14 @@ const router = require('express').Router();
 
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
+const allBlogs = require('./allBlogs-hbs')
 
-router.use('/', homeRoutes);
+const handlebars = [
+    homeRoutes,
+    allBlogs
+]
+
+router.use('/', handlebars);
 router.use('/api', apiRoutes);
 
 router.use((req, res) => {
