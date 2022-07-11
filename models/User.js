@@ -19,7 +19,7 @@ User.init(
       autoIncrement: true,
     },
     username: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING(16),
       allowNull: false,
       unique: true,
     },
