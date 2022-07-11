@@ -9,6 +9,8 @@ router.get('/allBlogs', async (req, res) => {
             include: [{ model: User }, { model: Comment }]
         });
 
+        // res.status(200).json(allBlogs)
+
         const blogs = allBlogs.map((posts) =>
             posts.get({ plain: true })
         );
