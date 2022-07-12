@@ -17,11 +17,16 @@ router.get('/blogs/:id', async (req, res) => {
     const blogComments = await Comment.findAll({
       where: {
         blog_id: req.params.id
-    }) 
+      }
+    })
     // res.status(200).json(singleBlog);
     const blog = singleBlog.get({ plain: true });
+    const comment = blogComments.map(comments =>
+      comments.get({ plain: true })
+    )
     res.render('singleBlog', {
       blog,
+      comment,
       // logged_in: req.session.logged_in,
     });
   } catch (err) {
