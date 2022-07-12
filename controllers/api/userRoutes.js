@@ -1,5 +1,6 @@
 // Import
 const router = require('express').Router();
+const bcrypt = require('bcrypt');
 const { Blog, User, Comment } = require('../../models');
 
 // Endpoint /api/users
@@ -77,6 +78,49 @@ router.delete('/:id', async (req, res) => {
         res.status(500).json('Something went wrong', err)
     }
 });
+
+// POST LOGIN
+router.post('/login', async (req, res) => {
+    try {
+        // Find User
+        const findUser = await User.findOne({
+            where: {
+                email: req.body.email
+            }
+        });
+        if (!findUser) {
+            res.status(400).json({ message: 'Emailis not registered.' });
+            return;
+        };
+
+        // Compare bcrypt'd password
+        const checkPassword = await bcrypt.compare(
+            req.body.password,
+            findUser.password
+        );
+        if (!checkPassword) {
+            res.status(400).json({ message: 'Incorect email or password.  Please try again' });
+            return;
+        }
+
+        // Create session variable
+        req.session.save(() => {
+            req.session.user_id = findUser.user_id;
+            req.session.logged_in = true;
+            res.json({ user: findUser, message: 'You are now logged in!' });
+        });
+
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
+
+
+
+
+
+
 
 // Export
 module.exports = router;

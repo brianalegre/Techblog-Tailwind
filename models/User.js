@@ -49,9 +49,18 @@ User.init(
   {
     // Encrypt Password
     hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+      beforeCreate: async (userData) => {
+        userData.username = await userData.username.toLowerCase();
+        userData.user_email = await userData.user_email.toLowerCase();
+        userData.user_password = await bcrypt.hash(userData.password, 5);
+        return userData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.user_password = await bcrypt.hash(
+          updatedUserData.user_password,
+          5
+        );
+        return updatedUserData;
       },
     },
     sequelize,
