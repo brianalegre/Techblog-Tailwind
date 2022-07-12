@@ -1,7 +1,7 @@
 // Import Modules
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
 // Create Model
 class User extends Model {
@@ -52,7 +52,7 @@ User.init(
       beforeCreate: async (userData) => {
         userData.username = await userData.username.toLowerCase();
         userData.user_email = await userData.user_email.toLowerCase();
-        userData.user_password = await bcrypt.hash(userData.password, 5);
+        userData.user_password = await bcrypt.hash(userData.user_password, 5);
         return userData;
       },
       beforeUpdate: async (updatedUserData) => {

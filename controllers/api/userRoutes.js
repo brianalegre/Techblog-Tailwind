@@ -89,14 +89,14 @@ router.post('/login', async (req, res) => {
             }
         });
         if (!findUser) {
-            res.status(400).json({ message: 'Emailis not registered.' });
+            res.status(400).json({ message: 'Email is not registered.' });
             return;
         };
 
         // Compare bcrypt'd password
         const checkPassword = await bcrypt.compare(
             req.body.password,
-            findUser.password
+            findUser.user_password
         );
         if (!checkPassword) {
             res.status(400).json({ message: 'Incorect email or password.  Please try again' });
