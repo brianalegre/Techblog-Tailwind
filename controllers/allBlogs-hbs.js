@@ -3,7 +3,7 @@ const { User, Blog, Comment } = require('../models');
 
 //endpoint of 
 
-router.get('/allBlogs', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const allBlogs = await Blog.findAll({
             // include: [{ model: User }, { model: Comment }]
