@@ -85,7 +85,7 @@ router.post('/login', async (req, res) => {
         // Find User
         const findUser = await User.findOne({
             where: {
-                email: req.body.email
+                user_email: req.body.user_email
             }
         });
         if (!findUser) {
@@ -95,7 +95,7 @@ router.post('/login', async (req, res) => {
 
         // Compare bcrypt'd password
         const checkPassword = await bcrypt.compare(
-            req.body.password,
+            req.body.user_password,
             findUser.user_password
         );
         if (!checkPassword) {
@@ -111,7 +111,7 @@ router.post('/login', async (req, res) => {
         });
 
     } catch (err) {
-        res.status(500).json(err)
+        res.status(500).json('IM THERE ERROR HERE', err)
     }
 })
 
