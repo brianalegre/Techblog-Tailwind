@@ -3,10 +3,12 @@ const router = require('express').Router();
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
 const allBlogs = require('./allBlogs-hbs')
+const singleBlog = require('./singleBlog-hbs')
 
 const handlebars = [
     homeRoutes,
-    allBlogs
+    allBlogs,
+    singleBlog
 ]
 
 router.use('/', handlebars);
