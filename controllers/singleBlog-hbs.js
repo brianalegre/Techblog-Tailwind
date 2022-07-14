@@ -28,6 +28,8 @@ router.get('/blogs/:id', async (req, res) => {
     res.render('singleBlog', {
       blog,
       comment,
+      isowner: blog.user_id === req.session.user_id
+
       // logged_in: req.session.logged_in,
     });
   } catch (err) {
