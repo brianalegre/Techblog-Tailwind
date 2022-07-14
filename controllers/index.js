@@ -5,12 +5,14 @@ const homeRoutes = require('./homeRoutes');
 const allBlogs = require('./allBlogs-hbs')
 const singleBlog = require('./singleBlog-hbs')
 const dashboard = require('./dashboard-hbs')
+const comment = require('./comment-hbs')
 
 const handlebars = [
     homeRoutes,
     allBlogs,
     singleBlog,
-    dashboard
+    dashboard,
+    comment
 ]
 
 router.use('/', handlebars);

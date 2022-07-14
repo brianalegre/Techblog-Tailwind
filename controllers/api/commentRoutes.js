@@ -43,6 +43,8 @@ router.post('/', async (req, res) => {
     }
 });
 
+
+
 // PUT UPDATE
 router.put('/:id', async (req, res) => {
     try {
@@ -78,6 +80,12 @@ router.delete('/:id', async (req, res) => {
         res.status(500).json('Something went wrong', err)
     }
 });
+
+
+
+
+
+
 
 // Export
 module.exports = router;

@@ -15,6 +15,12 @@ const blogData = [
         blog_post_date: '2022-03-24',
         user_id: 2,
     },
+    {
+        blog_title: 'Theety the Bird',
+        blog_content: 'Three Theeties are besties',
+        blog_post_date: '2022-03-25',
+        user_id: 1,
+    },
 ]
 
 const seedBlogs = () => Blog.bulkCreate(blogData);

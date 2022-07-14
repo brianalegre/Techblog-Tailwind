@@ -17,3 +17,15 @@
     {{> commentBlog}}
     {{/each}}
 </div>
+
+{{!-- Textbox for comments --}}
+
+{{!-- Comment Button --}}
+<div class="comment-section">
+    <input type="text" id="comment" placeholder="Write a comment...">
+    <button data-id="{{blog.blog_id}} " type="submit" id="comment-btn"> Add Comment </button>
+</div>
+
+{{!-- If User's Own Post - Delete and Update Button --}}
+
+<script src="/js/comment.js"></script>
