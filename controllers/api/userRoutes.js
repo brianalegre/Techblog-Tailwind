@@ -34,14 +34,21 @@ router.get('/:id', async (req, res) => {
 });
 
 // POST CREATE
-router.post('/', async (req, res) => {
-    try {
-        const newUser = await User.create(req.body);
-        res.status(200).json(newUser);
-    } catch (err) {
-        res.status(400).json('Something went wrong', err);
-    }
-});
+router.post('/', (req, res) => {
+    User.create({
+        username: req.body.username,
+        user_email: req.body.user_email,
+        user_password: req.body.user_password
+    })
+        .then(newUser => {
+            // Create session variable
+            req.session.save(() => {
+                req.session.user_id = newUser.user_id;
+                req.session.logged_in = true;
+                res.status(200).json(newUser);
+            });
+        })
+})
 
 // PUT UPDATE
 router.put('/:id', async (req, res) => {
@@ -125,11 +132,6 @@ router.post('/logout', (req, res) => {
         res.status(404).end();
     }
 });
-
-
-
-
-
 
 
 // Export
