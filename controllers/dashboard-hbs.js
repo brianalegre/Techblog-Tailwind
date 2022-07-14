@@ -19,24 +19,24 @@ router.get('/dashboard', async (req, res) => {
       });
     }
 
-    // const blogData = await Blog.findAll({
-    //   // include: [{ all: true, nested: true }],
-    //   // include: [{ model: User }],
-    //   where: {
-    //     user_id: req.session.user_id
-    //   }
-    // })
+    const blogData = await Blog.findAll({
+      // include: [{ all: true, nested: true }],
+      // include: [{ model: User }],
+      where: {
+        user_id: req.session.user_id
+      }
+    })
     // res.status(200).json(userData)
     // res.status(200).json(blogData)
 
     // Render data
     const user = userData.get({ plain: true });
-    // const blogs = blogData.map(blogPost =>
-    //   blogPost.get({ plain: true })
-    // )
+    const blog = blogData.map(blogs =>
+      blogs.get({ plain: true })
+    )
     res.render('dashboard', {
       user,
-      // blogs,
+      blog,
       // logged_in: req.session.logged_in,
     });
   } catch (err) {
