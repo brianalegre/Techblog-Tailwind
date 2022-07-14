@@ -7,7 +7,7 @@ const { User, Blog } = require('../models');
 router.get('/dashboard', async (req, res) => {
   try {
     const userData = await User.findOne({
-      include: [{ all: true, nested: true }],
+      // include: [{ all: true, nested: true }],
       where: {
         user_id: req.session.user_id,
       },
@@ -19,20 +19,24 @@ router.get('/dashboard', async (req, res) => {
       });
     }
 
-    const blogData = await Blog.findAll({
-      include: [{ model: User }],
-      where: {
-        user_id: req.params.id
-      }
-    })
+    // const blogData = await Blog.findAll({
+    //   // include: [{ all: true, nested: true }],
+    //   // include: [{ model: User }],
+    //   where: {
+    //     user_id: req.session.user_id
+    //   }
+    // })
+    // res.status(200).json(userData)
+    // res.status(200).json(blogData)
+
     // Render data
-    const users = userData.get({ plain: true });
-    const blogs = blogData.map(blog =>
-      blog.get({ plain: true })
-    )
-    res.render('myProfile', {
-      users,
-      blogs,
+    const user = userData.get({ plain: true });
+    // const blogs = blogData.map(blogPost =>
+    //   blogPost.get({ plain: true })
+    // )
+    res.render('dashboard', {
+      user,
+      // blogs,
       // logged_in: req.session.logged_in,
     });
   } catch (err) {

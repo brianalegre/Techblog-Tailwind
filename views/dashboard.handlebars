@@ -1,19 +1,10 @@
 {{!-- Display Single Blog Post --}}
+<h1> {{user.username}}'s Dashboard </h1>
 
-{{!-- Blogger's Username --}}
-<label for="username">Username: {{user.username}}</label>
-{{!-- Blog Date --}}
-<label for="blogDate">Date Posted: {{blog.blog_post_date}}</label>
-{{!-- Blog Title --}}
-<label for="blogTitle">Blog Title: {{blog.blog_title}}</label>
-{{!-- Blog Content --}}
-<h1>blogContent:{{blog.blog_content}}</h1>
 
-{{!-- For Each Comment --}}
-{{!-- Display all Blogs --}}
-<div>
-    {{!-- Categories title --}}
-    {{#each comment}}
-    {{> commentBlog}}
-    {{/each}}
-</div>
+
+{{!-- Display All User's Posts --}}
+{{!-- For Each Loop --}}
+
+
+{{!-- Create New Post Button --}}
