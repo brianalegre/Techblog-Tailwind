@@ -1,10 +1,10 @@
 // Import
 const router = require('express').Router();
 const { User, Blog } = require('../models');
-// const loggedIn = require('../utils/auth');
+const loggedIn = require('../utils/auth');
 
 //end point of /dashboard
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', loggedIn, async (req, res) => {
   try {
     const userData = await User.findOne({
       // include: [{ all: true, nested: true }],

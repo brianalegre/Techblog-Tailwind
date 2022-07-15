@@ -24,11 +24,15 @@ const commentHandler = async (id) => {
         }),
         headers: { 'Content-Type': 'application/json' },
       });
-      const waiting = response.json();
 
-      if (response.ok) {
+      const loggedIn = await response.json();
+
+      if (!loggedIn) {
+        return document.location.replace('/login');
+      } else {
         document.location.reload();
       }
+
     } catch (err) {
       console.log(err);
     }
