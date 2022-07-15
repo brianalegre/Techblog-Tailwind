@@ -2,6 +2,9 @@
 const router = require('express').Router();
 const { Comment } = require('../models');
 
+// Time Handler
+const today = new Date();
+const dateFormatter = '"' + today.toISOString().slice(0, 10) + '"';
 
 // POST CREATE
 router.post('/comment', async (req, res) => {
@@ -21,7 +24,7 @@ router.post('/comment', async (req, res) => {
         // if (!!checkProduct) {
         const newComment = await Comment.create({
             comment_content: req.body.comment_content,
-            comment_post_date: req.body.comment_post_date,
+            comment_post_date: dateFormatter,
             user_id: req.session.user_id,
             blog_id: req.body.blog_id,
         });
