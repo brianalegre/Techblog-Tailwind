@@ -37,7 +37,7 @@ router.get('/dashboard', async (req, res) => {
     res.render('dashboard', {
       user,
       blog,
-      // logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     return res.status(500).json(err);
