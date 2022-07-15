@@ -1,6 +1,8 @@
 {{!-- Display Single Blog Post --}}
 <h1> {{user.username}}'s Dashboard </h1>
-
+{{!-- Create New Post Button --}}
+{{!-- <button> Create New Post </button> --}}
+<button id="myBtn">Create New Post</button>
 
 
 {{!-- Display All User's Posts --}}
@@ -12,5 +14,30 @@
     {{/each}}
 </div>
 
-{{!-- Create New Post Button --}}
-<button> Create New Post </button>
+
+<!-- Trigger/Open The Modal -->
+{{!-- <button id="myBtn">Open Modal</button> --}}
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <label for="blogTitle">Title</label>
+            <input class="contentModal" type="text" id="blogTitle" />
+        </div>
+        <div class="modal-header">
+            <label for="blogContent">Content</label>
+            <input class="contentModal" type="text" id="blogContent" />
+        </div>
+        <div class="modal-footer">
+            <button type="submit" id="create-btn">Create Post</button>
+            <button type="cancel" id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+{{!-- Script --}}
+<script src="/js/newBlog.js"></script>
