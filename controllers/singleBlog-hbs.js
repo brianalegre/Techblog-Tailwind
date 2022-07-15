@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const { Blog, User, Comment } = require('../models');
+const loggedIn = require('../utils/auth');
+
 
 // GET SINGLE
-router.get('/blogs/:id', async (req, res) => {
+router.get('/blogs/:id', loggedIn, async (req, res) => {
   try {
     const singleBlog = await Blog.findByPk(req.params.id, {
       // include: [{ model: User }, { model: Comment }],

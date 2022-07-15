@@ -12,10 +12,6 @@ const dateFormatter = '"' + today.toISOString().slice(0, 10) + '"';
 // POST CREATE
 router.post('/comment', loggedIn, async (req, res) => {
     try {
-        const loggedIn = !!req.session.logged_in;
-        if (!loggedIn) {
-            return res.status(401).json(loggedIn);
-        }
 
         const newComment = await Comment.create({
             comment_content: req.body.comment_content,
