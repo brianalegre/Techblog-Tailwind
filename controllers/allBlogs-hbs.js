@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { User, Blog, Comment } = require('../models');
 
-//endpoint of 
+//endpoint of allBlogs
 
+// GET ALL
 router.get('/', async (req, res) => {
     try {
         const allBlogs = await Blog.findAll({
@@ -26,5 +27,7 @@ router.get('/', async (req, res) => {
         res.status(500).json(err)
     }
 })
+
+
 
 module.exports = router;

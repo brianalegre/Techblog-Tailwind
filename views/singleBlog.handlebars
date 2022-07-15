@@ -22,13 +22,15 @@
 {{!-- Comment Section --}}
 <div class="comment-section">
     <input type="text" id="comment" placeholder="Write a comment...">
-    <button data-id="{{blog.blog_id}} " type="submit" id="comment-btn"> Add Comment </button>
+    <button data-id="{{blog.blog_id}}" type="submit" id="comment-btn"> Add Comment </button>
 </div>
 
 {{!-- If User's Own Post - Delete and Update Button --}}
 {{#if isowner}}
-<button type="delete" id="delete-btn">Delete Blog</button>
-<button type="submit" id="update-btn">Update Blog</button>
+<div class="owner-section">
+    <button data-id="{{blog.blog_id}}" type="delete" id="delete-btn">Delete Blog</button>
+    <button data-id="{{blog.blog_id}}" type="submit" id="update-btn">Update Blog</button>
+</div>
 
 
 {{/if}}
@@ -37,3 +39,4 @@
 
 {{!-- Script --}}
 <script src="/js/comment.js"></script>
+<script src="/js/delete.js"></script>

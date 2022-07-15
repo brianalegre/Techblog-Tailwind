@@ -5,16 +5,16 @@ const { Blog, User, Comment } = require('../../models');
 // Endpoint /api/blogs
 
 // GET ALL
-router.get('/', async (req, res) => {
-    try {
-        const allBlogs = await Blog.findAll({
-            include: [{ model: User }, { model: Comment }],
-        })
-        res.status(200).json(allBlogs);
-    } catch (err) {
-        res.status(500).json('Something went wrong', err);
-    }
-});
+// router.get('/', async (req, res) => {
+//     try {
+//         const allBlogs = await Blog.findAll({
+//             include: [{ model: User }, { model: Comment }],
+//         })
+//         res.status(200).json(allBlogs);
+//     } catch (err) {
+//         res.status(500).json('Something went wrong', err);
+//     }
+// });
 
 // GET SINGLE
 router.get('/:id', async (req, res) => {
@@ -62,11 +62,28 @@ router.put('/:id', async (req, res) => {
 });
 
 // DELETE DESTORY
-router.delete('/:id', async (req, res) => {
+// router.delete('/:id', async (req, res) => {
+//     try {
+//         const delBlog = await Blog.destroy({
+//             where: {
+//                 blog_id: req.params.id
+//             },
+//         })
+//         if (!delBlog) {
+//             res.status(404).json({ message: 'No Blog found with that id' });
+//         }
+//         res.status(200).json({ message: 'Blog has been deleted' })
+//     } catch (err) {
+//         res.status(500).json('Something went wrong', err)
+//     }
+// });
+
+// DELETE DESTORY
+router.delete('/', async (req, res) => {
     try {
         const delBlog = await Blog.destroy({
             where: {
-                id: req.params.id
+                blog_id: req.body.blog_id
             },
         })
         if (!delBlog) {

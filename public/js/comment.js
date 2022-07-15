@@ -33,7 +33,7 @@ const commentHandler = async (id) => {
       const waiting = response.json();
 
       if (!waiting) {
-        return 'Uhoh'
+        return 'POST FAILED'
       }
     } catch (err) {
       console.log(err);
