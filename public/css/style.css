@@ -457,6 +457,66 @@ form {
 /* END MODALS */
 
 
+/* START HOME PAGE */
+.eachblog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+.blogDetails {
+  background-color: #6f7d8c;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.blogLink {
+  text-decoration: none;
+  color: white;
+  width: 50%;
+}
+
+.blogLink::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.blogLink:hover::after {
+  width: 100%;
+}
+
+.datePosted {
+  color: white;
+  font-size: 12px;
+  width: 25%;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.username {
+  color: #32021f;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.blogContent {
+  color: #000;
+  font-size: 15px;
+
+}
+
+/* END HOME PAGE */
+
 /* MEDIA QUERIES */
 @media (max-width: 1300px) {
   .nav>.nav-btn {
