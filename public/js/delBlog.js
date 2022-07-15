@@ -13,7 +13,7 @@ const delHandler = async (id) => {
             }),
             headers: { 'Content-Type': 'application/json' },
         });
-        if (response.ok) return document.location.replace('/');
+        if (response.ok) return document.location.replace('/dashboard');
         // if (response.status === 401) return document.location.replace('/login');
     } catch (err) {
         console.log(err);
