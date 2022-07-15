@@ -34,7 +34,7 @@ const createHandler = async (id) => {
 
     const blog_title = document.querySelector('#blogTitle').value.trim();
     const blog_content = document.querySelector('#blogContent').value.trim();
-    const blog_post_date = '2022-03-30'
+    // const blog_post_date = '2022-03-30'
     const user_id = id;
 
     // Check all form variables
@@ -45,7 +45,7 @@ const createHandler = async (id) => {
                 body: JSON.stringify({
                     blog_title,
                     blog_content,
-                    blog_post_date,
+                    // blog_post_date,
                     user_id,
                 }),
                 headers: { 'Content-Type': 'application/json' },

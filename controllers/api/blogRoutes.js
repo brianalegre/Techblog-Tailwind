@@ -2,6 +2,11 @@
 const router = require('express').Router();
 const { Blog, User, Comment } = require('../../models');
 
+// Date Handler
+const today = new Date();
+const dateFormatter = '"' + today.toISOString().slice(0, 10) + '"';
+
+
 // Endpoint /api/blogs
 
 // GET ALL
@@ -35,7 +40,12 @@ router.get('/:id', async (req, res) => {
 // POST CREATE
 router.post('/', async (req, res) => {
     try {
-        const newBlog = await Blog.create(req.body);
+        const newBlog = await Blog.create({
+            blog_title: req.body.blog_title,
+            blog_content: req.body.blog_content,
+            blog_post_date: dateFormatter,
+            user_id: req.body.user_id,
+        });
         res.status(200).json(newBlog);
     } catch (err) {
         res.status(400).json('Something went wrong', err);

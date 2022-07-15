@@ -2,7 +2,7 @@
 const router = require('express').Router();
 const { Comment } = require('../models');
 
-// Time Handler
+// Date Handler
 const today = new Date();
 const dateFormatter = '"' + today.toISOString().slice(0, 10) + '"';
 
