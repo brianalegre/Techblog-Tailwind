@@ -2,7 +2,7 @@
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("new-btn");
+var btn = document.getElementById("edit-btn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -24,36 +24,35 @@ window.onclick = function (event) {
     }
 }
 
-// SEND POST 
+// SEND PUT
 const modalSection = document.querySelector('.modal-footer');
-const createBtn = document.querySelector('#create-btn')
+const updateBtn = document.querySelector('#update-btn')
 
-// CREATE new Blog Post
-const createHandler = async (id) => {
+// Update Blog Post
+const updateHandler = async (id) => {
     // event.preventDefault();
 
     const blog_title = document.querySelector('#blogTitle').value.trim();
     const blog_content = document.querySelector('#blogContent').value.trim();
     // const blog_post_date = '2022-03-30'
-    const user_id = id;
+    const blog_id = id;
 
     // Check all form variables
     if (blog_title && blog_content) {
         try {
             const response = await fetch('/api/blogs', {
-                method: 'POST',
+                method: 'PUT',
                 body: JSON.stringify({
+                    blog_id,
                     blog_title,
                     blog_content,
                     // blog_post_date,
-                    user_id,
+                    // user_id,
                 }),
                 headers: { 'Content-Type': 'application/json' },
             });
-            const waiting = response.json();
-
             if (response.ok) {
-                document.location.replace('/dashboard');
+                document.location.reload();
             }
         } catch (err) {
             console.log(err);
@@ -61,10 +60,10 @@ const createHandler = async (id) => {
     }
 }
 
-if (createBtn) {
-    const user_id = createBtn.dataset.id;
-    createBtn.addEventListener('click', () => {
-        createHandler(user_id);
+if (updateBtn) {
+    const blog_id = updateBtn.dataset.id;
+    updateBtn.addEventListener('click', () => {
+        updateHandler(blog_id);
         // setTimeout(() => location.reload(), 2500);
     });
 }

@@ -1,5 +1,10 @@
 {{!-- Display Single Blog Post --}}
 
+{{!-- EDIT/Update --}}
+{{#if isowner}}
+<button id="edit-btn">Edit</button>
+{{/if}}
+
 {{!-- Blogger's Username --}}
 <label for="username">Username: {{user.username}}</label>
 {{!-- Blog Date --}}
@@ -29,14 +34,34 @@
 {{#if isowner}}
 <div class="owner-section">
     <button data-id="{{blog.blog_id}}" type="delete" id="delete-btn">Delete Blog</button>
-    <button data-id="{{blog.blog_id}}" type="submit" id="update-btn">Update Blog</button>
 </div>
-
-
 {{/if}}
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <label for="blogTitle">Title</label>
+            <input class="contentModal" type="text" id="blogTitle" value="{{blog.blog_title}}" />
+        </div>
+        <div class="modal-header">
+            <label for="blogContent">Content</label>
+            <input class="contentModal" type="text" id="blogContent" value="{{blog.blog_content}}" />
+        </div>
+        <div class="modal-footer">
+            <button data-id="{{blog.blog_id}}" type="submit" id="update-btn">Update Post</button>
+            <button type="cancel" id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
 
 
 {{!-- Script --}}
 <script src="/js/comment.js"></script>
+
+{{#if isowner}}
 <script src="/js/delete.js"></script>
+<script src="/js/updateBlog.js"></script>
+{{/if}}
