@@ -41,9 +41,6 @@ const commentHandler = async (id) => {
   }
 }
 
-// commentSection.addEventListener('submit', signupFormHandler);
-
-
 if (commentBtn) {
   const blog_id = commentBtn.dataset.id;
   commentBtn.addEventListener('click', () => {
