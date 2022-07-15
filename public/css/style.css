@@ -238,36 +238,8 @@ nav {
   /* margin: .5em; */
 }
 
-#search-icon {
-  padding: 5px;
-}
-
 .nav-icons {
   font-size: 0.825em;
-}
-
-.search-box i {
-  font-size: 20px;
-  color: black;
-  background-color: white;
-  margin-right: 0.5em;
-}
-
-.search-box input {
-  background-color: white;
-  flex: 1;
-  height: 40px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  padding-left: 10px;
-}
-
-#searchText {
-  height: 40px;
-  width: 20vh;
-  border-radius: 10px;
-  text-align: center;
 }
 
 .nav-options {
@@ -400,101 +372,6 @@ button {
 /* END NAV BAR Icon Animations */
 
 
-#spp-btns {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* Search Results Page */
-
-.searchResults-page-container {
-  align-items: center;
-  display: flex;
-  width: 70%;
-}
-
-.search-results-card {
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  align-items: center;
-}
-
-.sr-item-container a:hover .view-details {
-  transform: scale(1);
-  transition: all 0.5s;
-  background-color: black;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  width: 100%;
-}
-
-.view-details {
-  transform: scale(0);
-  transition: all 0.5s;
-  background-color: black;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  width: 100%;
-}
-
-.sr-list {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.sr-item-container {
-  padding: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.sr-item-container a {
-  display: flex;
-  gap: 2rem;
-}
-
-.sr-img-container {
-  background-color: white;
-  flex-wrap: wrap;
-  width: 25rem;
-}
-
-.sr-item-container img {
-  padding: 1.5rem;
-  width: 100%;
-  height: 100%;
-}
-
-.sr-item-box {
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 30rem;
-}
-
-.sr-details {
-  font-size: 1.1rem;
-}
-
-.sr-details h3,
-b {
-  color: #cc4100;
-}
-
-/* PROFILE PAGE */
-#form-btns-container {
-  display: flex;
-  align-items: center;
-}
 
 #update-btn,
 #cancel-btn {
@@ -548,7 +425,6 @@ form .form-group .material-icons {
 }
 
 
-/* Brian Started */
 
 .nav {
   /* height: 50px; */
