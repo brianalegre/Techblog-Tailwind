@@ -29,7 +29,7 @@ Build a CMS-style blog site similar to a Wordpress site, where developers can pu
 
 ## Links
 -   Github Repository:
-    - https://github.com/brianalegre/14-MVC-Homework
+    - https://github.com/brianalegre/14-MVC-Techblog
 -   Heroku Deployed:
     - https://alegre-techblog.herokuapp.com/
 
