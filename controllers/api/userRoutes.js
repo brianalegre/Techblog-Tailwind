@@ -92,7 +92,7 @@ router.post('/login', async (req, res) => {
         // Find User
         const findUser = await User.findOne({
             where: {
-                user_email: req.body.user_email
+                username: req.body.username
             }
         });
         if (!findUser) {
