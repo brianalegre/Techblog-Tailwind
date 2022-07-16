@@ -403,7 +403,7 @@ form {
   margin-top: 5px;
 }
 
-#update-btn:hover {
+.modal-footer #update-btn:hover {
   background-color: darkgreen;
 }
 
@@ -453,6 +453,8 @@ form {
   /* Could be more or less, depending on screen size */
 }
 
+
+
 #createTitle,
 #createContent {
   font-weight: bold;
@@ -485,7 +487,8 @@ form {
 }
 
 .modal-footer #create-btn,
-.modal-footer #cancel-btn {
+.modal-footer #cancel-btn,
+.modal-footer #update-btn {
   color: white;
   background-color: #000;
   font-size: 1.3em;

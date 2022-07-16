@@ -1,11 +1,8 @@
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("edit-btn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// Target
+const modal = document.getElementById("myModal");
+const btn = document.getElementById("edit-btn");
+const span = document.getElementsByClassName("close")[0];
+const cancelBtn = document.getElementById("cancel-btn")
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
@@ -22,6 +19,11 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+// When the user clicks on cancel, close the modal
+cancelBtn.onclick = function () {
+    modal.style.display = "none";
 }
 
 // SEND PUT

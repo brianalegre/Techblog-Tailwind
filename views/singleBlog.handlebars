@@ -30,6 +30,26 @@
     {{/each}}
 </section>
 
+<!-- Edit Post Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <h1 id="modalTitle"> Edit Post </h1>
+            <input class="contentModal" type="text" id="blogTitle" value="{{blog.blog_title}}" />
+        </div>
+        <div class="modal-header">
+            <label for="blogContent">Content</label>
+            <textarea class="contentModal" type="text" id="blogContent">{{blog.blog_content}}</textarea>
+        </div>
+        <div class="modal-footer">
+            <button data-id="{{blog.blog_id}}" type="submit" id="update-btn">Update</button>
+            <button type="cancel" id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
 
 
 
