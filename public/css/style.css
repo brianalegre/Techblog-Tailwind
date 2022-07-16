@@ -629,6 +629,36 @@ form {
 
 .singleBlog .blogContent {
   font-size: 1rem;
+  font-weight: bold;
+}
+
+.eachComment {
+  border: 1px solid grey;
+  margin: 20px;
+  width: 90vw;
+  height: 10vh;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  /* background-color: #9b9b9b; */
+  background-color: #9eb1c4;
+
+}
+
+.eachComment p {
+  padding-left: 10px;
+  /* padding-top: 10px; */
+}
+
+.eachComment .username {
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+
+.eachComment .datePosted {
+  padding-bottom: 5px;
+  color: #000;
 }
 
 
