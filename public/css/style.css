@@ -478,13 +478,14 @@ form {
 .blogLink {
   text-decoration: none;
   color: white;
-  width: 50%;
+  width: 10%;
+  text-align: center;
 }
 
 .blogLink::after {
   content: '';
   width: 0%;
-  height: 2px;
+  height: 3px;
   background: #f44336;
   display: block;
   margin: auto;
@@ -492,7 +493,7 @@ form {
 }
 
 .blogLink:hover::after {
-  width: 100%;
+  width: 30%;
 }
 
 .datePosted {
