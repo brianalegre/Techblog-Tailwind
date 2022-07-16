@@ -420,8 +420,8 @@ form {
   margin-top: 5px;
 }
 
-.modal-footer #update-btn:hover .modal-footer,
-#comment-btn:hover {
+.modal-footer #update-btn:hover,
+.modal-footer #comment-btn:hover {
   background-color: darkgreen;
 }
 
