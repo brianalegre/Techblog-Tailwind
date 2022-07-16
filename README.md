@@ -16,24 +16,22 @@
 Build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
 
 ## Application Preview
-<p align="left">
-    <img alt="" src="">
+<p align="center">
+    <img alt="Site Preview" src="./public/assets/images/SitePreview.png">
 </p>
 
-
-## Installation
-
-
 ## Usage
-
+- Create a User
+- Login
+- Browse Posts
+- Add Comments to Posts
+- Create, Edit, Delete your own Posts
 
 ## Links
 -   Github Repository:
     - https://github.com/brianalegre/14-MVC-Homework
--   Video Demo (YouTube):
-    - PENDING
--   Vide Demo (Github):
-    - PENDING
+-   Heroku Deployed:
+    - https://alegre-techblog.herokuapp.com/
 
 ## Criteria
 - Deployed to Heroku
