@@ -553,7 +553,7 @@ form {
   font-size: 12px;
   width: 25%;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .username {
@@ -565,7 +565,7 @@ form {
 .blogContent {
   color: #000;
   font-size: 15px;
-
+  margin-top: 10px
 }
 
 /* END HOME PAGE */
@@ -590,7 +590,10 @@ form {
 
 }
 
-#new-btn {
+#new-btn,
+#edit-btn,
+#addComment-btn,
+#delete-btn {
   font-size: .75rem;
   height: 1.5rem;
   width: 7.5rem;
@@ -599,6 +602,33 @@ form {
   cursor: pointer;
   margin: 5px 10px 5px 20px;
 
+}
+
+/* END DASHBOARD */
+
+/* START SINGLE BLOG */
+.singleBlog {
+  background-color: #6f7d8c;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90vw;
+  height: 30vh;
+  overflow: auto;
+}
+
+.singleBlog .username {
+  font-size: 2.5rem;
+}
+
+.singleBlog .datePosted {
+  font-size: 1.25rem;
+}
+
+.singleBlog .blogContent {
+  font-size: 1rem;
 }
 
 

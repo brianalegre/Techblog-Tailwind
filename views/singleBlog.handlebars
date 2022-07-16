@@ -1,61 +1,30 @@
 {{!-- Display Single Blog Post --}}
 
 {{!-- EDIT/Update --}}
-{{#if isowner}}
-<button id="edit-btn">Edit Blog</button>
-{{/if}}
-
-{{!-- Blogger's Username --}}
-<label for="username">Username: {{user.username}}</label>
-{{!-- Blog Date --}}
-<label for="blogDate">Date Posted: {{blog.blog_post_date}}</label>
-{{!-- Blog Title --}}
-<label for="blogTitle">Blog Title: {{blog.blog_title}}</label>
-{{!-- Blog Content --}}
-<h1>blogContent:{{blog.blog_content}}</h1>
-
-{{!-- For Each Comment --}}
-{{!-- Display all Blogs --}}
-<div>
-    {{!-- Categories title --}}
-    {{#each comment}}
-    {{> commentBlog}}
-    {{/each}}
-</div>
-
-
-{{!-- Comment Section --}}
-<div class="comment-section">
-    <input type="text" id="comment" placeholder="Write a comment...">
-    <button data-id="{{blog.blog_id}}" type="submit" id="comment-btn"> Add Comment </button>
-</div>
-
-{{!-- If User's Own Post - Delete and Update Button --}}
-{{#if isowner}}
-<div class="owner-section">
-    <button data-id="{{blog.blog_id}}" type="delete" id="delete-btn">Delete Blog</button>
+<header id="dashboard">
+    <h1> {{blog.blog_title}} </h1>
+</header>
+<div id="subNav">
+    <button id="addComment-btn" class="hvr-icon-float">Add Comment <i class="fa fa-commenting-o hvr-icon"
+            aria-hidden="true"></i></button>
+    {{#if isowner}}
+    <button id="edit-btn" class="hvr-icon-float">Edit Post <i class="fa fa-pencil-square-o hvr-icon"
+            aria-hidden="true"></i></button>
+    <button data-id="{{blog.blog_id}}" type="delete" id="delete-btn" class="hvr-icon-float">Delete Post <i
+            class="fa fa-trash-o hvr-icon" aria-hidden="true"></i></button>
 </div>
 {{/if}}
+</div>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="modal-header">
-            <label for="blogTitle">Title</label>
-            <input class="contentModal" type="text" id="blogTitle" value="{{blog.blog_title}}" />
-        </div>
-        <div class="modal-header">
-            <label for="blogContent">Content</label>
-            <input class="contentModal" type="text" id="blogContent" value="{{blog.blog_content}}" />
-        </div>
-        <div class="modal-footer">
-            <button data-id="{{blog.blog_id}}" type="submit" id="update-btn">Update Post</button>
-            <button type="cancel" id="cancel-btn">Cancel</button>
-        </div>
+<main>
+    <div class="singleBlog">
+        <p class="username">{{blog.user.username}} Posted:</p>
+        <p class="datePosted">{{blog.blog_post_date}}</p>
+        <h3 class="blogContent">{{blog.blog_content}}</h3>
     </div>
-</div>
+</main>
+
+
 
 
 {{!-- Script --}}
