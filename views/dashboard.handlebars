@@ -8,12 +8,19 @@
             aria-hidden="true"></i></button>
 </div>
 <section>
+    {{#if hasItems}}
     {{!-- For Each Loop --}}
     <div class="eachBlog">
         {{#each blog}}
         {{> myBlogs}}
         {{/each}}
     </div>
+    {{else}}
+    <div id="no-posts">
+        <h1>You have no Blog Posts</h1>
+        <p>Click 'New Post' above to create your first Blog Post!</p>
+    </div>
+    {{/if}}
 </section>
 
 
