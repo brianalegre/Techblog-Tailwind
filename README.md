@@ -4,7 +4,6 @@
 ## Table of Contents 📑
 - [Description](#description)
 - [Application Preview](#application-preview)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Links](#links)
 - [Criteria](#criteria)
@@ -76,6 +75,7 @@ Build a CMS-style blog site similar to a Wordpress site, where developers can pu
 - MySQL2
 - Sequelize
 - dotenv
+- Handlebars
 
 ## Questions
 Questions? Concerns?  Contact Me Below:
