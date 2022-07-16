@@ -49,14 +49,13 @@
     {{{body}}}
   </div>
 
-  {{! placeholder for where the view will be injected }}
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{!--
-  <script src="../../controllers/cartHandlebar.js"></script> --}}
-  {{/if}}
-  <script src="/js/search.js"></script>
-  <script src="/js/appendContent.js"></script>
 </body>
+{{! placeholder for where the view will be injected }}
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{!--
+<script src="../../controllers/cartHandlebar.js"></script> --}}
+{{/if}}
+<script src="/js/appendContent.js"></script>
 
 </html>

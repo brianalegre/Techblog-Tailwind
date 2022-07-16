@@ -28,6 +28,12 @@ body {
 .login-page-container,
 .sign-up-container {
   padding-bottom: 13vh;
+  /* Center container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+
 }
 
 #login-container {
