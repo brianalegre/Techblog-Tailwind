@@ -23,12 +23,16 @@
     <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-header">
-            <label for="blogTitle">Title</label>
-            <input class="contentModal" type="text" id="blogTitle" />
+            <h1 id="modalTitle"> Create New Blog Post </h1>
         </div>
         <div class="modal-header">
-            <label for="blogContent">Content</label>
-            <input class="contentModal" type="text" id="blogContent" />
+            {{!-- <label for="blogTitle" id="createTitle">Title</label> --}}
+            <input class="contentModal" type="text" id="blogTitle" placeholder="Title" />
+        </div>
+        <div class="modal-header">
+            {{!-- <label for="blogContent" id="createContent">Content</label> --}}
+            <textarea class="contentModal" id="blogContent"
+                placeholder="What's on your mind, {{user.username}}?"></textarea>
         </div>
         <div class="modal-footer">
             <button data-id="{{user.user_id}}" type="submit" id="create-btn">Create Post</button>
