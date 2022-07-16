@@ -492,7 +492,7 @@ form {
   content: '';
   width: 0%;
   height: 3px;
-  background: #f44336;
+  background: #6c596e;
   display: block;
   margin: auto;
   transition: 0.5s;
@@ -523,6 +523,38 @@ form {
 }
 
 /* END HOME PAGE */
+
+
+/* START DASHBOARD */
+#dashboard h1 {
+  color: #32021f;
+  font-size: 3rem;
+  height: 6rem;
+  background-color: #88bdc9;
+  border-radius: 10px 10px 0 0;
+  margin: 0 10px 0 10px;
+  padding: 10px 0 0 20px;
+}
+
+#subNav {
+  background-color: #6c596e;
+  height: 2rem;
+  border-radius: 0 0 10px 10px;
+  margin: 0 10px 0 10px;
+
+}
+
+#new-btn {
+  font-size: .75rem;
+  height: 1.5rem;
+  width: 7.5rem;
+  background-color: white;
+  border-radius: 7.5px;
+  cursor: pointer;
+  margin: 5px 10px 5px 20px;
+
+}
+
 
 /* MEDIA QUERIES */
 @media (max-width: 1300px) {
