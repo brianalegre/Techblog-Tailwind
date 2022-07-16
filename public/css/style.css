@@ -1,5 +1,6 @@
 /* IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Space+Mono&family=Work+Sans:wght@400;500;800&display=swap');
 
 /* START UNIVERSAL */
 * {
@@ -19,6 +20,17 @@ body {
 }
 
 /* END UNIVERSAL */
+
+
+/* START HEADER */
+#logo {
+  text-decoration: none;
+  font-family: 'Work Sans', sans-serif;
+  color: black;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
 
 /* START LOGIN / SIGNUP */
 .invalid-auth {
@@ -571,6 +583,7 @@ form {
   width: 25%;
   font-weight: bold;
   margin-top: 5px;
+  flex-wrap: nowrap;
 }
 
 .username {
@@ -680,7 +693,7 @@ form {
 
 
 /* MEDIA QUERIES */
-@media (max-width: 1300px) {
+/* @media (max-width: 1300px) {
   .nav>.nav-btn {
     display: inline-block;
     position: absolute;
@@ -731,4 +744,4 @@ form {
     overflow-y: auto;
   }
 
-}
+} */
