@@ -17,7 +17,7 @@ Build a CMS-style blog site similar to a Wordpress site, where developers can pu
 
 ## Application Preview
 <p align="center">
-    <img alt="Site Preview" src="./public/assets/images/SitePreview.png">
+    <img alt="Site Preview" src="./public/images/SitePreview.png">
 </p>
 
 ## Usage
