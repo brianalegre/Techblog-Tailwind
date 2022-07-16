@@ -4,6 +4,7 @@
 ## Table of Contents 📑
 - [Description](#description)
 - [Application Preview](#application-preview)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Links](#links)
 - [Criteria](#criteria)
@@ -18,6 +19,19 @@ Build a CMS-style blog site similar to a Wordpress site, where developers can pu
 <p align="center">
     <img alt="Site Preview" src="./public/images/SitePreview.png">
 </p>
+
+## Installation
+- Copy the repository to your system
+- Create .env file
+    - SET DB_NAME to 'tech_blog'
+    - SET DB_USER to 'YOUR-MYSQL-USERNAME'
+    - SET DB_PASSWORD to 'YOUR-MYSQL-PASSWORD'
+- npm install
+- Load schema.sql via MySQL command line:
+    - source schema.sql
+- npm run seed
+- node server.js
+
 
 ## Usage
 - Create a User
