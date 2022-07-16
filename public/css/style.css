@@ -50,7 +50,8 @@ body {
 }
 
 .login-header,
-#modalTitle {
+#modalTitle,
+#modalCommentTitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +62,8 @@ body {
 }
 
 .login-header h1,
-#modalTitle h1 {
+#modalTitle h1,
+#modalCommentTitle h1 {
   font-size: 2.75rem;
   margin: 0.25em;
   background-color: inherit;
@@ -79,7 +81,8 @@ body {
 }
 
 #login-form button:hover,
-.modal-footer #create-btn:hover {
+.modal-footer #create-btn:hover,
+.modal-footer #comment-btn:hover {
   background-color: darkgreen;
 }
 
@@ -395,7 +398,9 @@ form {
 #update-btn,
 #cancel-btn,
 #delete-btn,
-#create-btn {
+#create-btn,
+#cancel-btn2,
+#comment-btn {
   border-radius: 10px;
   width: 175px;
   cursor: pointer;
@@ -403,12 +408,14 @@ form {
   margin-top: 5px;
 }
 
-.modal-footer #update-btn:hover {
+.modal-footer #update-btn:hover .modal-footer,
+#comment-btn:hover {
   background-color: darkgreen;
 }
 
 #cancel-btn:hover,
-.modal-footer #cancel-btn:hover {
+.modal-footer #cancel-btn:hover,
+.modal-footer #cancel-btn2:hover {
   background-color: darkred;
 }
 
@@ -461,7 +468,8 @@ form {
 }
 
 #blogTitle,
-#blogContent {
+#blogContent,
+#commentContent {
   border-radius: 5px;
   display: flex;
   margin: auto;
@@ -471,7 +479,8 @@ form {
   width: 75%;
 }
 
-#blogContent {
+#blogContent,
+#commentContent {
   height: 200px;
   width: 75%;
 }
@@ -488,14 +497,17 @@ form {
 
 .modal-footer #create-btn,
 .modal-footer #cancel-btn,
-.modal-footer #update-btn {
+.modal-footer #update-btn,
+.modal-footer #cancel-btn2,
+.modal-footer #comment-btn {
   color: white;
   background-color: #000;
   font-size: 1.3em;
 }
 
 /* The Close Button */
-.close {
+.close,
+.commentClose {
   color: #aaa;
   float: right;
   font-size: 35px;
@@ -503,7 +515,9 @@ form {
 }
 
 .close:hover,
-.close:focus {
+.commentClose:hover,
+.close:focus,
+.commentClose:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;

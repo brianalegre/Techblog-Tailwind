@@ -40,12 +40,30 @@
             <input class="contentModal" type="text" id="blogTitle" value="{{blog.blog_title}}" />
         </div>
         <div class="modal-header">
-            <label for="blogContent">Content</label>
             <textarea class="contentModal" type="text" id="blogContent">{{blog.blog_content}}</textarea>
         </div>
         <div class="modal-footer">
             <button data-id="{{blog.blog_id}}" type="submit" id="update-btn">Update</button>
             <button type="cancel" id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- Comment Modal -->
+<div id="commentModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="commentClose">&times;</span>
+        <div class="modal-header">
+            <h1 id="modalCommentTitle"> Make Your Comment </h1>
+        </div>
+        <div class="modal-header">
+            <textarea class="contentModal" type="text" id="commentContent"
+                placeholder="What's on your mind, {{blog.user.username}}?"></textarea>
+        </div>
+        <div class="modal-footer">
+            <button data-id="{{blog.blog_id}}" type="submit" id="comment-btn">Comment</button>
+            <button type="cancel" id="cancel-btn2">Cancel</button>
         </div>
     </div>
 </div>
