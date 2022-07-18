@@ -13,7 +13,7 @@
 - [License](#license)
 
 ## Description
-Build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
+Refactoring my 14-MVC-Techblog repo to use Bulma.io
 
 ## Application Preview
 <p align="center">
@@ -41,9 +41,9 @@ Build a CMS-style blog site similar to a Wordpress site, where developers can pu
 - Create, Edit, Delete your own Posts
 
 ## Links
--   Github Repository:
+-   Original Github Repository:
     - https://github.com/brianalegre/14-MVC-Techblog
--   Heroku Deployed:
+-   Original Heroku Deployed:
     - https://alegre-techblog.herokuapp.com/
 
 ## Criteria
