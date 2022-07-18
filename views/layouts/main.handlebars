@@ -6,6 +6,7 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <title>Tech Blog</title>
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  {{!-- BULMA --}}
   <link rel="stylesheet" type="text/css"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -13,27 +14,42 @@
 </head>
 
 <body>
-  {{! this is the main html file wrapper for all your views }}
-  <header>
-    <div>
-      <h1><a href="/" id="logo"> TECHBLOG </a></h1>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        {{!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> --}}
+        TECHBLOG
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-  </header>
 
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a href="/" class="navbar-item hvr-icon-float">
+          Home
+          <img src="../images/icons/navbar/akar-icons_home.png" alt="home-button icon" class="hvr-icon"></a>
 
-  <div>
-    <a href="/" class="hvr-icon-float">Home <img src="../images/icons/navbar/akar-icons_home.png" alt="home-button icon"
-        class="hvr-icon"></a>
-    <a href="/dashboard" class="hvr-icon-float">Dashboard <i class="fa fa-address-card-o hvr-icon"
-        aria-hidden="true"></i></a>
-    {{#if logged_in}}
-    <a id="logout-btn" class="hvr-icon-up">Logout <img src="../images/icons/navbar/ri_logout-circle-line.png"
-        alt="logout icon" class="hvr-icon"></a>
-    {{else}}
-    <a id="login-btn" href="/login" class="hvr-icon-float">Login <img src="../images/icons/navbar/login-icon.png"
-        alt="login icon" class="hvr-icon"></a>
-    {{/if}}
-  </div>
+        <a href="/dashboard" class="navbar-item hvr-icon-float">
+          Dashboard
+          <i class="fa fa-address-card-o hvr-icon" aria-hidden="true"></i>
+        </a>
+        {{#if logged_in}}
+        <a id="logout-btn" class="navbar-item hvr-icon-up">
+          Logout
+          <img src="../images/icons/navbar/ri_logout-circle-line.png" alt="logout icon" class="hvr-icon"></a>
+        {{else}}
+        <a id="login-btn" href="/login" class="navbar-item hvr-icon-float">
+          Login
+          <img src="../images/icons/navbar/login-icon.png" alt="login icon" class="hvr-icon"></a>
+        {{/if}}
+      </div>
+    </div>
   </nav>
 
   {{! placeholder for where the view will be injected }}
