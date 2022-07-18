@@ -96,7 +96,7 @@ router.post('/login', async (req, res) => {
             }
         });
         if (!findUser) {
-            res.status(400).json({ message: 'Username is not registered.' });
+            res.status(400).json({ message: 'Email is not registered.' });
             return;
         };
 
