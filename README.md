@@ -16,24 +16,35 @@
 Build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
 
 ## Application Preview
-<p align="left">
-    <img alt="" src="">
+<p align="center">
+    <img alt="Site Preview" src="./public/images/SitePreview.png">
 </p>
 
-
 ## Installation
+- Copy the repository to your system
+- Create .env file
+    - SET DB_NAME to 'tech_blog'
+    - SET DB_USER to 'YOUR-MYSQL-USERNAME'
+    - SET DB_PASSWORD to 'YOUR-MYSQL-PASSWORD'
+- npm install
+- Load schema.sql via MySQL command line:
+    - source schema.sql
+- npm run seed
+- node server.js
 
 
 ## Usage
-
+- Create a User
+- Login
+- Browse Posts
+- Add Comments to Posts
+- Create, Edit, Delete your own Posts
 
 ## Links
 -   Github Repository:
-    - https://github.com/brianalegre/14-MVC-Homework
--   Video Demo (YouTube):
-    - PENDING
--   Vide Demo (Github):
-    - PENDING
+    - https://github.com/brianalegre/14-MVC-Techblog
+-   Heroku Deployed:
+    - https://alegre-techblog.herokuapp.com/
 
 ## Criteria
 - Deployed to Heroku
@@ -78,6 +89,7 @@ Build a CMS-style blog site similar to a Wordpress site, where developers can pu
 - MySQL2
 - Sequelize
 - dotenv
+- Handlebars
 
 ## Questions
 Questions? Concerns?  Contact Me Below:

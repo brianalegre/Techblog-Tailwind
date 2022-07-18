@@ -22,6 +22,17 @@ body {
 
 /* END UNIVERSAL */
 
+
+/* START HEADER */
+#logo {
+  text-decoration: none;
+  font-family: 'Work Sans', sans-serif;
+  color: black;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+
 /* START LOGIN / SIGNUP */
 .invalid-auth {
   color: darkred;
@@ -30,6 +41,12 @@ body {
 .login-page-container,
 .sign-up-container {
   padding-bottom: 13vh;
+  /* Center container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+
 }
 
 #login-container {
@@ -45,7 +62,9 @@ body {
   background-color: white;
 }
 
-.login-header {
+.login-header,
+#modalTitle,
+#modalCommentTitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +74,9 @@ body {
   background-color: inherit;
 }
 
-.login-header h1 {
+.login-header h1,
+#modalTitle h1,
+#modalCommentTitle h1 {
   font-size: 2.75rem;
   margin: 0.25em;
   background-color: inherit;
@@ -72,7 +93,9 @@ body {
   background-color: inherit;
 }
 
-#login-form button:hover {
+#login-form button:hover,
+.modal-footer #create-btn:hover,
+.modal-footer #comment-btn:hover {
   background-color: darkgreen;
 }
 
@@ -386,7 +409,11 @@ form {
 
 /* START BTNS */
 #update-btn,
-#cancel-btn {
+#cancel-btn,
+#delete-btn,
+#create-btn,
+#cancel-btn2,
+#comment-btn {
   border-radius: 10px;
   width: 175px;
   cursor: pointer;
@@ -394,11 +421,14 @@ form {
   margin-top: 5px;
 }
 
-#update-btn:hover {
+.modal-footer #update-btn:hover,
+.modal-footer #comment-btn:hover {
   background-color: darkgreen;
 }
 
-#cancel-btn:hover {
+#cancel-btn:hover,
+.modal-footer #cancel-btn:hover,
+.modal-footer #cancel-btn2:hover {
   background-color: darkred;
 }
 
@@ -420,7 +450,7 @@ form {
   top: 0;
   width: 100%;
   /* Full width */
-  height: 100%;
+  height: 100vh;
   /* Full height */
   overflow: auto;
   /* Enable scroll if needed */
@@ -437,20 +467,70 @@ form {
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
+  height: 500px;
+  border-radius: 20px;
   /* Could be more or less, depending on screen size */
 }
 
+
+
+#createTitle,
+#createContent {
+  font-weight: bold;
+}
+
+#blogTitle,
+#blogContent,
+#commentContent {
+  border-radius: 5px;
+  display: flex;
+  margin: auto;
+}
+
+#blogTitle {
+  width: 75%;
+}
+
+#blogContent,
+#commentContent {
+  height: 200px;
+  width: 75%;
+}
+
+.modal-header {
+  margin-top: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px
+}
+
+.modal-footer #create-btn,
+.modal-footer #cancel-btn,
+.modal-footer #update-btn,
+.modal-footer #cancel-btn2,
+.modal-footer #comment-btn {
+  color: white;
+  background-color: #000;
+  font-size: 1.3em;
+}
+
 /* The Close Button */
-.close {
+.close,
+.commentClose {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
 }
 
 .close:hover,
-.close:focus {
+.commentClose:hover,
+.close:focus,
+.commentClose:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -459,8 +539,167 @@ form {
 /* END MODALS */
 
 
+/* START HOME PAGE */
+.eachblog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+.blogDetails {
+  background-color: #6f7d8c;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.blogLink {
+  text-decoration: none;
+  color: white;
+  width: 10%;
+  text-align: center;
+}
+
+.blogLink::after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: #6c596e;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.blogLink:hover::after {
+  width: 30%;
+}
+
+.datePosted {
+  color: white;
+  font-size: 12px;
+  width: 25%;
+  font-weight: bold;
+  margin-top: 5px;
+  flex-wrap: nowrap;
+}
+
+.username {
+  color: #32021f;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.blogContent {
+  color: #000;
+  font-size: 15px;
+  margin-top: 10px
+}
+
+/* END HOME PAGE */
+
+
+/* START DASHBOARD */
+#dashboard h1 {
+  color: #32021f;
+  font-size: 3rem;
+  height: 6rem;
+  background-color: #88bdc9;
+  border-radius: 10px 10px 0 0;
+  margin: 0 10px 0 10px;
+  padding: 10px 0 0 20px;
+}
+
+#subNav {
+  background-color: #6c596e;
+  height: 2rem;
+  border-radius: 0 0 10px 10px;
+  margin: 0 10px 0 10px;
+
+}
+
+#new-btn,
+#edit-btn,
+#addComment-btn,
+#delete-btn {
+  font-size: .75rem;
+  height: 1.5rem;
+  width: 7.5rem;
+  background-color: white;
+  border-radius: 7.5px;
+  cursor: pointer;
+  margin: 5px 10px 5px 20px;
+
+}
+
+#no-posts {
+  margin: 20px;
+  text-align: center;
+}
+
+/* END DASHBOARD */
+
+/* START SINGLE BLOG */
+.singleBlog {
+  background-color: #6f7d8c;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90vw;
+  height: 30vh;
+  overflow: auto;
+}
+
+.singleBlog .username {
+  font-size: 2.5rem;
+}
+
+.singleBlog .datePosted {
+  font-size: 1.25rem;
+}
+
+.singleBlog .blogContent {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.eachComment {
+  border: 1px solid grey;
+  margin: 20px;
+  width: 90vw;
+  height: 10vh;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  /* background-color: #9b9b9b; */
+  background-color: #9eb1c4;
+
+}
+
+.eachComment p {
+  padding-left: 10px;
+  /* padding-top: 10px; */
+}
+
+.eachComment .username {
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+
+.eachComment .datePosted {
+  padding-bottom: 5px;
+  color: #000;
+}
+
+
 /* MEDIA QUERIES */
-@media (max-width: 1300px) {
+/* @media (max-width: 1300px) {
   .nav>.nav-btn {
     display: inline-block;
     position: absolute;
@@ -511,4 +750,4 @@ form {
     overflow-y: auto;
   }
 
-}
+} */

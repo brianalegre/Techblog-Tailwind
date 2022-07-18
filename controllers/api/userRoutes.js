@@ -92,11 +92,11 @@ router.post('/login', async (req, res) => {
         // Find User
         const findUser = await User.findOne({
             where: {
-                user_email: req.body.user_email
+                username: req.body.username
             }
         });
         if (!findUser) {
-            res.status(400).json({ message: 'Email is not registered.' });
+            res.status(400).json({ message: 'Username is not registered.' });
             return;
         };
 

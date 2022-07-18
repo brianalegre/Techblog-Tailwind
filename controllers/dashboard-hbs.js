@@ -34,9 +34,12 @@ router.get('/dashboard', loggedIn, async (req, res) => {
     const blog = blogData.map(blogs =>
       blogs.get({ plain: true })
     )
+    const blogLength = blog.length;
+    const hasItems = blogLength > 0 ? true : false;
     res.render('dashboard', {
       user,
       blog,
+      hasItems,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
