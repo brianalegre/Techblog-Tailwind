@@ -13,7 +13,7 @@
 - [License](#license)
 
 ## Description
-Refactoring my 14-MVC-Techblog repo to use Bulma.io
+Refactoring my 14-MVC-Techblog repo to use Tailwind 
 
 ## Application Preview
 <p align="center">
