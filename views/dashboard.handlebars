@@ -10,7 +10,7 @@
 <section>
     {{#if hasItems}}
     {{!-- For Each Loop --}}
-    <div class="eachBlog">
+    <div class="">
         {{#each blog}}
         {{> myBlogs}}
         {{/each}}
@@ -25,23 +25,23 @@
 
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="">
     <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="modal-header">
+    <div class="">
+        <span class="">&times;</span>
+        <div class="">
             <h1 id="modalTitle"> Create New Blog Post </h1>
         </div>
-        <div class="modal-header">
+        <div class="">
             {{!-- <label for="blogTitle" id="createTitle">Title</label> --}}
-            <input class="contentModal" type="text" id="blogTitle" placeholder="Title" />
+            <input class="" type="text" id="blogTitle" placeholder="Title" />
         </div>
-        <div class="modal-header">
+        <div class="">
             {{!-- <label for="blogContent" id="createContent">Content</label> --}}
-            <textarea class="contentModal" id="blogContent"
+            <textarea class="" id="blogContent"
                 placeholder="What's on your mind, {{user.username}}?"></textarea>
         </div>
-        <div class="modal-footer">
+        <div class="">
             <button data-id="{{user.user_id}}" type="submit" id="create-btn">Create Post</button>
             <button type="cancel" id="cancel-btn">Cancel</button>
         </div>
